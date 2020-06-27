@@ -1,0 +1,286 @@
+/* Resets for Demo 
+------------------------------------------------- */
+html { 
+	-webkit-text-size-adjust: 100%; 
+	-ms-text-size-adjust: 100%; 
+}
+
+.clear:before,.clear:after{content:'';display:table; }
+.clear:after{clear:both;}
+.clear{zoom:1;}
+
+/* Start Menu Styling 
+--------------------------------------------- */
+
+.nav{ 
+	height:37px; 
+	position:relative; 
+	z-index:999;
+	
+}
+
+
+.nav ul, 
+.nav ol, 
+.nav dl, 
+.nav li { 
+	line-height:1.5em;
+	list-style:none; 
+}
+
+/* Hide responsive menu trigger 
+--------------------------------------------- */
+.menu-icon { display:none; }
+
+/* Start dropdown menu styling 
+--------------------------------------------- */
+ul.dropdown,
+ul.dropdown li,
+ul.dropdown ul { 
+	margin: 0; 
+	padding: 0; 
+	
+}
+
+ul.dropdown{
+	float:left;
+	width:100%; 
+	position: relative;
+	margin-top:5px; 
+}
+
+ul.dropdown li { 
+	float: left; 
+	vertical-align: middle; 
+	zoom: 1; /* IE6 */
+}
+
+/* General list styling 
+-------------------------------------------- */
+ul.dropdown li {  
+	font-size: 19px;
+    font-weight: 400;
+    text-transform: uppercase;
+	background-image:url(../images/menu-bor.png);
+	background-repeat:no-repeat;
+	background-position:right center;
+	padding:0px 25px;
+}
+
+/* General links styling 
+-------------------------------------------- */
+ul.dropdown a,
+ul.dropdown a:visited,	
+ul.dropdown a:hover, 		
+ul.dropdown a:active { 
+	text-decoration: none; 
+}
+
+ul.dropdown a, 
+ul.dropdown span { 
+	display: block;
+	outline:none; 
+	cursor:pointer; 
+	padding: 10px 0px; 
+}
+
+ul.dropdown ul a,
+ul.dropdown ul span {  
+	padding: 8px 17px;  
+}	
+
+ul.dropdown li:hover, 
+ul.dropdown li.hover { 
+	position: relative; 
+	cursor:pointer; 
+}
+
+/* Level I+ 
+--------------------------------------- */
+ul.dropdown ul { 
+	display:none; 
+	position: absolute;
+	z-index: 598;
+	width: 220px; 
+	top: 100%; 
+	left: 0; 
+}
+.dnt3-menu{}
+ul.dropdown li.last{
+	background-image:none !important;
+	padding-right:0px !important;
+}
+	 
+ul.dropdown li:hover > ul{ 
+	display:block;
+}
+
+ul.dropdown ul li { 
+	float: none;
+	font-size:16px;
+	font-weight: 400; 
+	text-transform:none;
+	position:relative; 
+	
+}
+
+ul.dropdown ul li.hover, 
+ul.dropdown ul li:hover { /* background-color:#3498DB; color: #fff; */ }
+ul.dropdown ul li a:hover { /* color: #fff; */ }
+	
+/* Level II +  
+---------------------------------------- */
+ul.dropdown ul ul { top:0; left:100%; }
+
+
+/* Add trailing arrows 
+---------------------------------------- */	
+ul.dropdown *.sub { 
+	padding-right:19px; 
+	background-image: url(../images/nav-arrow-down-thin.gif); 
+	background-position: 95% 50%; 
+	background-repeat: no-repeat; 
+}
+
+ul.dropdown ul *.sub { 
+	padding-right: 15px; 
+	background-image: url(../images/nav-arrow-right-thin.gif);
+	background-position: 100% 50%; 									  
+	background-repeat: no-repeat; 
+}
+
+/* Change trailing arrows on :hover IE7+
+--------------------------------------------------------- */
+ul.dropdown li.sub:hover{  background-image: url(../images/nav-arrow-down.gif); } 
+ul.dropdown ul li.sub:hover{ background-image: url(../images/nav-arrow-right.gif);  }
+
+/* Main menu seperator 
+---------------------------------------------- */																		  								  
+ul.dropdown li.divider{ 
+	padding:0!important; 
+	margin:0!important; 
+	border:0!important;
+	display:block; 
+	height:49px; 
+	float:left;
+	width:1px; 
+}
+
+ul.dropdown li.rtl ul { position: absolute; top: 100%; right:0; z-index: 598; left:auto; }
+ul.dropdown li.rtl ul ul { top:0; right:100%; left:auto; }
+ul.dropdown li.ltr ul, ul.dropdown li.ltr ul ul { top:0; left:100%!important; right:auto!important; }
+
+/* Theme settings - Change your menu colors, bgcolors, border-colors
+---------------------------------------------------------------------- */
+
+/* Theme Color*/
+/*first level*/
+.dnt3-menu, 
+.dnt3-menu ul.dropdown { background:transparent; }
+.dnt3-menu ul.dropdown li:hover{}
+.dnt3-menu ul.dropdown li a{color:#ffffff;}
+.dnt3-menu ul.dropdown a:hover, 		
+.dnt3-menu ul.dropdown a.active{background:transparent;color:#6CFF08;  } 
+/*second level*/
+.dnt3-menu ul.dropdown ul {background: rgba(255, 255, 255, 0.84); }
+.dnt3-menu ul.dropdown ul li{}
+.dnt3-menu ul.dropdown ul li a{border:none !important;}
+.dnt3-menu ul.dropdown ul li a{color:#000;text-transform:uppercase;font-weight:400;}
+.dnt3-menu ul.dropdown ul li a:hover{color:#298DBF;}
+.dnt3-menu ul.dropdown li.divider{ background:#3399FF;}
+
+
+
+/* Responsiveness 
+------------------------------------- */
+
+/* All device screens < = 768px */
+@media screen and (max-width:767px) {
+
+/* Responsive menu trigger 
+------------------------------------ */
+.menu-icon, 
+.menu-icon span, 
+.menu-icon { 
+	color: #fff; 
+	width:100%; 
+	height:50px; 
+	line-height:40px; 
+	padding:5px; 
+	font-size:1.3em; 
+	font-weight:bold; 
+	cursor: pointer; 
+	display:block;
+	position:relative;	
+}
+
+.menu-icon span{ 
+	width: auto;
+	padding:0 15px;
+	padding-left:40px; 
+	height:37px; 
+	background:#fff url(../images/nav-toggle.png) center no-repeat ; 
+	color:#FFFFFF;
+	text-align: center;
+	text-indent:-999em; 
+	display: inline-block;
+	position:absolute;
+	top:0px;
+	right:5px;
+	 
+}
+
+/* Style these as desired 
+ * - colors, bgclors etc 
+------------------------------- */
+.menu-icon:hover { }
+.menu-icon:hover span{ }
+.menu-icon.active { }
+.menu-icon.active span{ }
+
+
+/* Responsive menu styling  
+--------------------------------- */
+.nav{ position:relative;  }
+.nav,
+ul.dropdown, 
+.menu-icon, 
+.menu-icon span, 
+ul.dropdown *{ box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; } 	
+ul.dropdown{  display:none; position: relative; top:-1px; border-top:1px solid #545e66 ; background-color:#535d65 }
+ul.dropdown  li { position:relative; float:none; display:block; border-bottom:1px solid #545e66 ;}
+ul.dropdown  li li{ border-top:0;}
+ul.dropdown  ul a{ padding-left:25px; }
+ul.dropdown  ul ul a{ padding-left:45px; }
+ul.dropdown  ul a:hover  { background-color:#34495E;}
+ul.dropdown  li.sub ul > li{ /*border-top:1px solid;*/ }
+ul.dropdown *.sub { padding:0!important; background-image: none!important; }
+ul.dropdown ul{ overflow: hidden; max-height: 0; width:auto; display:block; position: static;}
+ul.dropdown ul.current { display:block; max-height:100em; }
+ul.dropdown li.sub > a{ padding-right:25px; }
+ul.dropdown li.sub > a.current{   }
+ul.dropdown li.sub > ul a.current{   }
+ul.dropdown li.sub > a:after, 
+ul.dropdown li.sub > a.current:after { position: absolute; top: 0; right: 0; display: block; font-size: 1.5em; padding: 0.55em 0.5em; }
+ul.dropdown li.sub > a:after { content: '\002B'; }	
+ul.dropdown li.sub > a.current:after { content: "\2013"; top:-2px; }	
+ul.dropdown li.rtl ul, 
+ul.dropdown li.ltr ul, 
+ul.dropdown li.ltr ul ul, 
+ul.dropdown li.rtl ul ul { position:static; }
+ul.dropdown li.divider{ display:none!important; }
+.dnt3-menu ul.dropdown ul {background:#004870 !important; }
+.dnt3-menu ul.dropdown a:hover, .dnt3-menu ul.dropdown a.active{
+	background-image:none !important ; color: #ffdb60 }
+ul.dropdown li {  
+	background-image:none !important;
+}
+}
+
+/* All device screens >  768px */
+@media screen and (min-width: 769px) {
+	/* Avoid responsive menu hiding on browser window resize 
+	-------------------------------------------------------------- */
+	ul.dropdown{ display:block !important ; }
+	 
+}
